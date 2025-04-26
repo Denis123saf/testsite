@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Меню - Съели Сумели</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="vignette"></div>
+  
+  <div class="site-logo-container">
+    <img src="images/logo.png" alt="Логотип Съели Сумели" class="site-logo">
+  </div>
+  
+  <header class="syelisumely-header">
+    <div class="logo-container">
+      <a href="index.html" class="logo">ГЛАВНАЯ</a>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="menu.html" class="active">МЕНЮ</a></li>
+        <li><a href="/booking">БРОНИРОВАНИЕ</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-close">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="mobile-menu-content">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="index.html#about">О нас</a></li>
+          <li><a href="menu.html" class="active">Меню</a></li>
+          <li><a href="index.html#contacts">Контакты</a></li>
+          <li><a href="index.html#reviews">Отзывы</a></li>
+          <li><a href="/booking">Бронирование</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-social">
+        <a href="https://instagram.com/syeli_sumeli/" class="social-icon instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://vk.com/syelisumeli" class="social-icon vk">
+          <i class="fab fa-vk"></i>
+        </a>
+        <a href="https://t.me/syeli_sumeli" class="social-icon telegram">
+          <i class="fab fa-telegram-plane"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Оверлей для мобильного меню -->
+  <div class="mobile-menu-overlay"></div>
+
+  <section class="menu-section">
+    <div class="menu-container">
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-tab="food">
+          <i class="fas fa-utensils"></i>
+          Блюда
+        </button>
+        <button class="menu-tab" data-tab="drinks">
+          <i class="fas fa-glass-cheers"></i>
+          Напитки
+        </button>
+        <button class="menu-tab" data-tab="bar">
+          <i class="fas fa-wine-bottle"></i>
+          Карта бара
+        </button>
+      </div>
+
+      <div class="menu-content">
+        <div class="menu-tab-content active" id="food">
+          
+          <div class="menu-categories">
+            <div class="menu-category">
+              <h3>Холодные закуски</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Свежие овощи</h4>
+                    <span class="price">340₽</span>
+                  </div>
+                  <p class="description">270г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Мясные деликатесы</h4>
+                    <span class="price">690₽</span>
+                  </div>
+                  <p class="description">180/40/40г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Сырный сет с ягодным соусом</h4>
+                    <span class="price">740₽</span>
+                  </div>
+                  <p class="description">180/40/40г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Соленья</h4>
+                    <span class="price">350₽</span>
+                  </div>
+                  <p class="description">200г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Гебжалия с вишней, мусс из мацони</h4>
+                    <span class="price">370₽</span>
+                  </div>
+                  <p class="description">200г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Пхалеули</h4>
+                    <span class="price">350₽</span>
+                  </div>
+                  <p class="description">170г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Тартар из говядины, мусс из пармезана</h4>
+                    <span class="price">590₽</span>
+                  </div>
+                  <p class="description">140/20г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Паштет из утки, куриной печени с вишней и фундуком</h4>
+                    <span class="price">430₽</span>
+                  </div>
+                  <p class="description">120/50/50г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Сациви из куриного филе с соусом баже</h4>
+                    <span class="price">390₽</span>
+                  </div>
+                  <p class="description">250г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Оливки, маринованный виноград</h4>
+                    <span class="price">290₽</span>
+                  </div>
+                  <p class="description">100г</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-category">
+              <h3>Горячие закуски</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Долма с муссом из мацони</h4>
+                    <span class="price">390₽</span>
+                  </div>
+                  <p class="description">170/40г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Сырные шарики с соусом цезарь</h4>
+                    <span class="price">330₽</span>
+                  </div>
+                  <p class="description">150/40г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Тальята с рукколой, мусс из пармезана, вишня</h4>
+                    <span class="price">690₽</span>
+                  </div>
+                  <p class="description">90/90г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Жареный сыр, облепиха, зеленый салат с томатом</h4>
+                    <span class="price">390₽</span>
+                  </div>
+                  <p class="description">140/70г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Хинкали с говядиной и свининой, Вареные/жареные</h4>
+                    <span class="price">110/120₽</span>
+                  </div>
+                  <p class="description">110г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Хинкали с говядиной и бараниной, Вареные/жареные</h4>
+                    <span class="price">130/140₽</span>
+                  </div>
+                  <p class="description">110г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Хинкали с сыром Вареные/жареные</h4>
+                    <span class="price">120/130₽</span>
+                  </div>
+                  <p class="description">110г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Хинкали с куриным филе, муссом из пармезана</h4>
+                    <span class="price">320₽</span>
+                  </div>
+                  <p class="description">210г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Квери с сыром, тархуном</h4>
+                    <span class="price">310₽</span>
+                  </div>
+                  <p class="description">150/40г</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-category">
+              <h3>Салаты</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Салат с рваным копченым лососем, страчателлой, клубникой</h4>
+                    <span class="price">590₽</span>
+                  </div>
+                  <p class="description">190г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Теплый салат с говяжьим языком, кремом из корня сельдерея</h4>
+                    <span class="price">390₽</span>
+                  </div>
+                  <p class="description">160г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Салат с ростбифом, рукколой, вишней</h4>
+                    <span class="price">450₽</span>
+                  </div>
+                  <p class="description">150г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Салат с бужениной, шпинатом, яблочным пюре</h4>
+                    <span class="price">360₽</span>
+                  </div>
+                  <p class="description">150г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Салат с печеными овощами, страчателлой, муссом из мацони</h4>
+                    <span class="price">350₽</span>
+                  </div>
+                  <p class="description">200г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Салат с хрустящими баклажанами, томатом, кинзой</h4>
+                    <span class="price">340₽</span>
+                  </div>
+                  <p class="description">200г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Тбилисури со свежими овощами, грецким орехом</h4>
+                    <span class="price">270₽</span>
+                  </div>
+                  <p class="description">170г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Цезарь с куриным филе</h4>
+                    <span class="price">360₽</span>
+                  </div>
+                  <p class="description">200г</p>
+                </div>
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Цезарь с креветками</h4>
+                    <span class="price">590₽</span>
+                  </div>
+                  <p class="description">200г</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-category">
+              <h3>Основные блюда</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Шашлык из баранины</h4>
+                    <span class="price">890₽</span>
+                  </div>
+                  <p class="description">Сочный шашлык из отборной баранины с маринованным луком и соусом</p>
+                </div>
+                <!-- Добавьте больше блюд здесь -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-tab-content" id="drinks">
+          
+          <div class="menu-categories">
+            <div class="menu-category">
+              <h3>Безалкогольные напитки</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Лимонад Натахтари</h4>
+                    <span class="price">190₽</span>
+                  </div>
+                  <p class="description">Грузинский газированный напиток</p>
+                </div>
+                <!-- Добавьте больше напитков здесь -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-tab-content" id="bar">
+          
+          <div class="menu-categories">
+            <div class="menu-category">
+              <h3>Вина</h3>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="item-header">
+                    <h4>Киндзмараули</h4>
+                    <span class="price">2900₽</span>
+                  </div>
+                  <p class="description">Красное полусладкое вино</p>
+                </div>
+                <!-- Добавьте больше позиций здесь -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Обработка табов меню
+      const menuTabs = document.querySelectorAll('.menu-tab');
+      const menuContents = document.querySelectorAll('.menu-tab-content');
+      
+      menuTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          // Убираем активный класс со всех табов
+          menuTabs.forEach(t => t.classList.remove('active'));
+          // Добавляем активный класс текущему табу
+          this.classList.add('active');
+          
+          // Скрываем все контенты
+          menuContents.forEach(content => content.classList.remove('active'));
+          
+          // Показываем нужный контент
+          const tabId = this.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+          
+          // Прокручиваем к началу содержимого на мобильных устройствах
+          if (window.innerWidth <= 768) {
+            const menuContainer = document.querySelector('.menu-container');
+            menuContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+      
+      // Функция для адаптивного отображения на мобильных устройствах
+      function handleResize() {
+        if (window.innerWidth <= 480) {
+          // Горизонтальная прокрутка для табов на маленьких экранах
+          const tabsContainer = document.querySelector('.menu-tabs');
+          if (tabsContainer) {
+            tabsContainer.style.overflowX = 'auto';
+            tabsContainer.style.webkitOverflowScrolling = 'touch';
+            tabsContainer.style.scrollBehavior = 'smooth';
+          }
+        }
+      }
+      
+      // Запускаем при загрузке и изменении размера
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      
+      // Мобильное меню
+      const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const mobileMenuClose = document.querySelector('.mobile-menu-close');
+      const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+      const mobileMenuLinks = document.querySelectorAll('.mobile-nav a');
+      
+      // Фиксация шапки и логотипа при скролле
+      function handleScroll() {
+        const header = document.querySelector('.syelisumely-header');
+        const logo = document.querySelector('.site-logo-container');
+        
+        // Добавляем класс для улучшения отображения на мобильных устройствах
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+          if (logo) logo.classList.add('scrolled');
+          if (mobileMenuIcon) mobileMenuIcon.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+          if (logo) logo.classList.remove('scrolled');
+          if (mobileMenuIcon) mobileMenuIcon.classList.remove('scrolled');
+        }
+      }
+      
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Проверяем при загрузке страницы
+      
+      // Открытие мобильного меню
+      if (mobileMenuIcon) {
+        mobileMenuIcon.addEventListener('click', function() {
+          mobileMenu.classList.add('active');
+          mobileMenuOverlay.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Запрещаем прокрутку страницы
+        });
+      }
+      
+      // Закрытие мобильного меню по клику на крестик
+      if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', function() {
+          closeMobileMenu();
+        });
+      }
+      
+      // Закрытие мобильного меню по клику на оверлей
+      if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', function() {
+          closeMobileMenu();
+        });
+      }
+      
+      // Закрытие мобильного меню по клику на ссылку
+      if (mobileMenuLinks.length > 0) {
+        mobileMenuLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            closeMobileMenu();
+          });
+        });
+      }
+      
+      // Функция закрытия мобильного меню
+      function closeMobileMenu() {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Разрешаем прокрутку страницы
+      }
+    });
+  </script>
+</body>
+</html> 
