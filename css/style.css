@@ -21,6 +21,23 @@ body {
   position: relative;
 }
 
+/* Специальные стили для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Убираем fixed для мобильных */
+    background-size: auto 100vh; /* Устанавливаем высоту фона равной высоте экрана */
+    background-position: center top; /* Центрируем по горизонтали и выравниваем по верху */
+  }
+}
+
+/* Дополнительные стили для узких экранов */
+@media (max-width: 480px) {
+  body {
+    background-size: cover; /* Для самых маленьких устройств используем cover */
+    background-position: center center; /* Центрируем полностью */
+  }
+}
+
 body::before {
   content: '';
   position: absolute;
