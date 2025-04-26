@@ -21,37 +21,6 @@ body {
   position: relative;
 }
 
-/* Фикс для мобильных устройств */
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-    background-position: center center;
-    min-height: 100vh;
-    height: auto;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-}
-
-/* Специальные правила для iOS */
-@supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll;
-    background-size: auto 100vh;
-    min-height: 100vh;
-  }
-  
-  .main-section {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .about-section, .hits-slider-section, .map-section, .reviews-section {
-    background-color: #1a1a1a;
-  }
-}
-
 body::before {
   content: '';
   position: absolute;
@@ -956,6 +925,11 @@ body::after {
 }
 
 @media (max-width: 768px) {
+  body {
+    background-size: auto 100%;
+    background-position: center center;
+  }
+  
   .site-logo-container {
     display: none;
   }
@@ -968,13 +942,12 @@ body::after {
     box-shadow: none;
     width: auto;
     max-width: none;
-    padding: 0;
+    padding: 100;
     position: absolute;
     top: 20px;
     right: 20px;
     left: auto;
     transform: none;
-    z-index: 2000;
   }
   
   .syelisumely-header.scrolled {
@@ -997,8 +970,6 @@ body::after {
   .mobile-menu-icon {
     display: flex;
     position: fixed;
-    right: 20px;
-    top: 20px;
   }
   
   .main-title {
@@ -1079,17 +1050,14 @@ body::after {
     font-size: 13px;
     padding: 3px 0;
   }
-  
-  .main-section {
-    padding-top: 0;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    height: 100vh;
-  }
 }
 
 @media (max-width: 480px) {
+  body {
+    background-size: auto 100%;
+    background-position: center center;
+  }
+  
   .site-logo {
     width: 250px;
   }
