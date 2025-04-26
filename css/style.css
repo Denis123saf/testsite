@@ -22,21 +22,32 @@ body {
 }
 
 /* Специальные стили для мобильных устройств */
+@media (max-width: 1024px) {
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
 @media (max-width: 768px) {
   body {
-    background-attachment: scroll; /* Убираем fixed для мобильных */
-    background-size: cover; /* Устанавливаем высоту фона равной высоте экрана */
-    background-position: center; /* Центрируем по горизонтали и выравниваем по верху */
-    min-height: 100vh;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center top;
+    min-height: -webkit-fill-available; /* Для iOS Safari */
+  }
+  
+  html {
     height: -webkit-fill-available; /* Для iOS Safari */
   }
 }
 
-/* Дополнительные стили для узких экранов */
 @media (max-width: 480px) {
   body {
-    background-size: cover; /* Для самых маленьких устройств используем cover */
-    background-position: center 0; /* Центрируем полностью */
+    background-size: cover;
+    background-position: center center;
+    min-height: -webkit-fill-available;
   }
 }
 
@@ -196,78 +207,6 @@ body::after {
   min-height: 100vh;
   position: relative;
   padding-top: 0px;
-}
-
-@media (max-width: 768px) {
-  .main-section {
-    min-height: 100vh;
-    min-height: -webkit-fill-available; /* Для iOS Safari */
-    padding: 60px 20px;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .container {
-    width: 100%;
-    padding: 0 15px;
-    margin-top: -60px; /* Компенсация верхнего отступа */
-  }
-
-  .main-title {
-    font-size: 48px;
-    margin-bottom: 15px;
-    padding: 0 10px;
-  }
-
-  .subtitle {
-    font-size: 20px;
-    margin-bottom: 30px;
-    padding: 0 10px;
-  }
-
-  .buttons-container {
-    padding: 0 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    background-position: center 0;
-  }
-
-  .main-section {
-    padding: 40px 15px;
-  }
-
-  .container {
-    margin-top: -40px;
-  }
-
-  .main-title {
-    font-size: 36px;
-    letter-spacing: 2px;
-  }
-
-  .subtitle {
-    font-size: 18px;
-    margin-bottom: 25px;
-  }
-
-  .buttons-container {
-    margin-top: 15px;
-  }
-}
-
-/* Добавляем поддержку для высоких мобильных экранов */
-@media (min-height: 800px) and (max-width: 768px) {
-  .main-section {
-    padding-top: 80px;
-  }
-
-  .container {
-    margin-top: -80px;
-  }
 }
 
 .container {
