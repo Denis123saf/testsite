@@ -396,7 +396,7 @@ body::after {
 .hits-slider-section {
   width: 100%;
   background-color: #1a1a1a;
-  padding: 40px 0;
+  padding: 50px 0;
   overflow: hidden;
   margin-top: -100px;
   position: relative;
@@ -809,6 +809,11 @@ body::after {
   transform: translateY(0);
 }
 
+.reviews-frame iframe {
+  border: none;
+  width: 100%;
+}
+
 /* Мобильное меню */
 .mobile-menu-icon {
   display: none;
@@ -1060,6 +1065,21 @@ body::after {
     font-size: 13px;
     padding: 3px 0;
   }
+  
+  .hit-item {
+    min-width: 250px;
+    height: 200px;
+  }
+  
+  .hit-name {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .reviews-frame div {
+    width: 100% !important;
+    height: 600px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1169,5 +1189,19 @@ body::after {
     width: 40px;
     height: 40px;
     font-size: 20px;
+  }
+  
+  .hit-item {
+    min-width: 200px;
+    height: 180px;
+  }
+  
+  .hit-name {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .reviews-frame div {
+    height: 500px !important;
   }
 } 

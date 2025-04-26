@@ -183,8 +183,26 @@ document.addEventListener('DOMContentLoaded', function() {
     hitsSlider.addEventListener('mouseleave', function() {
       this.style.animationPlayState = 'running';
     });
+    
+    // Для мобильных: останавливаем слайдер при касании
+    hitsSlider.addEventListener('touchstart', function() {
+      this.style.animationPlayState = 'paused';
+    });
+    
+    hitsSlider.addEventListener('touchend', function() {
+      this.style.animationPlayState = 'running';
+    });
   }
   
+  // Проверка видимости элементов при прокрутке
   window.addEventListener('scroll', checkScroll);
   checkScroll(); // Проверяем при загрузке страницы
+  
+  // Принудительно показываем отзывы через 2 секунды после загрузки страницы
+  setTimeout(function() {
+    const reviewsFrame = document.querySelector('.reviews-frame');
+    if (reviewsFrame) {
+      reviewsFrame.classList.add('visible');
+    }
+  }, 2000);
 }); 
