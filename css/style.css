@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #121212; /* Темный фон как запасной вариант */
   background-image: url('../images/fonlk.jpg');
   background-size: cover;
   background-position: center;
@@ -19,23 +19,6 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
-}
-
-/* Исправление для iOS Safari */
-@supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll;
-  }
-  
-  body::before {
-    background-attachment: scroll;
-    position: fixed;
-  }
-  
-  body::after {
-    background-attachment: scroll;
-    position: fixed;
-  }
 }
 
 body::before {
@@ -942,6 +925,21 @@ body::after {
 }
 
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  /* iOS-специфические фиксы для фона */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      background-attachment: scroll;
+      /* Обеспечиваем, чтобы фон покрывал всю область просмотра на iOS */
+      height: -webkit-fill-available;
+    }
+  }
+  
   .site-logo-container {
     display: none;
   }
@@ -1064,7 +1062,7 @@ body::after {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .site-logo {
     width: 250px;
   }
@@ -1171,16 +1169,5 @@ body::after {
     width: 40px;
     height: 40px;
     font-size: 20px;
-  }
-}
-
-/* Дополнительное решение для iPhone и iPad */
-@media screen and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  body {
-    background-attachment: scroll;
-  }
-  
-  body::before, body::after {
-    position: fixed;
   }
 } 
