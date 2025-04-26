@@ -448,15 +448,22 @@ body::after {
 }
 
 .hits-slider-section::before {
-  display: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
 }
 
 .hits-title {
   font-size: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   text-align: center;
   font-family: 'Arial Black', sans-serif;
   position: relative;
@@ -464,22 +471,16 @@ body::after {
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  line-height: 1;
-}
-
-.hits-title::before, .hits-title::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 3px;
-  background-color: #fff;
 }
 
 .hits-title::after {
-  bottom: 8px;
-  width: 80%;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #f18f01;
 }
 
 .hits-slider {
@@ -762,14 +763,7 @@ body::after {
 }
 
 .section-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
-  z-index: 0;
-  pointer-events: none;
+  display: none;
 }
 
 /* Стили секции с отзывами */
@@ -954,6 +948,41 @@ body::after {
   opacity: 1;
 }
 
+/* Стили для мобильной кнопки звонка */
+.mobile-call-button {
+  display: none;
+  position: fixed;
+  left: 20px;
+  top: 15px;
+  z-index: 1500;
+  background: #f18f01;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-call-button:hover {
+  background: #d67e00;
+}
+
+.mobile-call-button.scrolled {
+  background: rgba(241, 143, 1, 0.9);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 769px) {
+  .mobile-call-button {
+    display: none !important;
+  }
+}
+
 @media (max-width: 768px) {
   .site-logo-container {
     display: none;
@@ -1075,6 +1104,11 @@ body::after {
     font-size: 13px;
     padding: 3px 0;
   }
+  
+  .mobile-call-button {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1184,5 +1218,11 @@ body::after {
     width: 40px;
     height: 40px;
     font-size: 20px;
+  }
+  
+  .mobile-call-button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
   }
 } 
