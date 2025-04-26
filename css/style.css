@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #121212; /* Темный фон как запасной вариант */
+  background-color: #000;
   background-image: url('../images/fonlk.jpg');
   background-size: cover;
   background-position: center;
@@ -19,6 +19,37 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
+}
+
+/* Фикс для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-position: center center;
+    min-height: 100vh;
+    height: auto;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+}
+
+/* Специальные правила для iOS */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+    background-size: auto 100vh;
+    min-height: 100vh;
+  }
+  
+  .main-section {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .about-section, .hits-slider-section, .map-section, .reviews-section {
+    background-color: #1a1a1a;
+  }
 }
 
 body::before {
@@ -396,7 +427,7 @@ body::after {
 .hits-slider-section {
   width: 100%;
   background-color: #1a1a1a;
-  padding: 50px 0;
+  padding: 40px 0;
   overflow: hidden;
   margin-top: -100px;
   position: relative;
@@ -809,11 +840,6 @@ body::after {
   transform: translateY(0);
 }
 
-.reviews-frame iframe {
-  border: none;
-  width: 100%;
-}
-
 /* Мобильное меню */
 .mobile-menu-icon {
   display: none;
@@ -930,21 +956,6 @@ body::after {
 }
 
 @media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-    background-size: cover;
-    background-position: center center;
-  }
-  
-  /* iOS-специфические фиксы для фона */
-  @supports (-webkit-touch-callout: none) {
-    body {
-      background-attachment: scroll;
-      /* Обеспечиваем, чтобы фон покрывал всю область просмотра на iOS */
-      height: -webkit-fill-available;
-    }
-  }
-  
   .site-logo-container {
     display: none;
   }
@@ -957,12 +968,13 @@ body::after {
     box-shadow: none;
     width: auto;
     max-width: none;
-    padding: 100;
+    padding: 0;
     position: absolute;
     top: 20px;
     right: 20px;
     left: auto;
     transform: none;
+    z-index: 2000;
   }
   
   .syelisumely-header.scrolled {
@@ -985,6 +997,8 @@ body::after {
   .mobile-menu-icon {
     display: flex;
     position: fixed;
+    right: 20px;
+    top: 20px;
   }
   
   .main-title {
@@ -1066,19 +1080,12 @@ body::after {
     padding: 3px 0;
   }
   
-  .hit-item {
-    min-width: 250px;
-    height: 200px;
-  }
-  
-  .hit-name {
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .reviews-frame div {
-    width: 100% !important;
-    height: 600px !important;
+  .main-section {
+    padding-top: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100vh;
   }
 }
 
@@ -1189,19 +1196,5 @@ body::after {
     width: 40px;
     height: 40px;
     font-size: 20px;
-  }
-  
-  .hit-item {
-    min-width: 200px;
-    height: 180px;
-  }
-  
-  .hit-name {
-    padding: 8px;
-    font-size: 14px;
-  }
-  
-  .reviews-frame div {
-    height: 500px !important;
   }
 } 
